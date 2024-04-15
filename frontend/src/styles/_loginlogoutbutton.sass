@@ -1,0 +1,36 @@
+@import './variables'
+
+.connectbutton-wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+
+.connect-button 
+  font-size: 1.2rem
+  padding: 10px 30px
+  cursor: pointer
+  background-color: $accentcolor_green
+  color: white
+  border: none
+  border-radius: 5px
+  transition: all 0.3s ease
+  animation: pulse 1.5s infinite alternate
+
+.small-connect-button 
+  font-weight: bold
+  height: 2rem
+  margin-top: 0.5rem
+  margin-right: 1rem
+  font-size: 0.9rem
+  padding: 0.3rem 0.8rem
+
+.connect-button:hover 
+  background-color: $light_background 
+  color: $accentcolor_green
+
+@keyframes pulse 
+  from 
+    transform: scale(1)
+  
+  to 
+    transform: scale(1.05)
