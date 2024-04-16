@@ -10,10 +10,11 @@ import Farcaster from './pages/Farcaster';
 import LeaderBoard from './pages/LeaderBoard';
 import Admin from './pages/Admin';
 import "./styles/_global.sass";
-import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import { PointsProvider } from './context/PointsContext';
 import { SmartContractProvider } from './context/SmartContractContext';
 import { NFTProvider } from './context/NFTContext';
+import './styles/_app.sass';
 
 
 
@@ -24,7 +25,11 @@ function App() {
       <SmartContractProvider>
       <NFTProvider>
           <Router>
-            <Header />
+          <div className="app-container">
+          <Sidebar />
+        </div>
+        <div className="main-content">
+            
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/market" element={<Market />} />
@@ -36,6 +41,7 @@ function App() {
               <Route path="/mywallet" element={<MyWallet />} />
               <Route path="/admin" element={<Admin />} />
             </Routes>
+            </div>
           </Router>
           </NFTProvider>
       </SmartContractProvider>

@@ -1,0 +1,91 @@
+/* Sidebar.css */
+
+@import './variables'
+
+
+.sidebar 
+  width: 5rem
+  height: 100%
+  background-color: #ccc
+  border: none
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding-bottom: 1rem
+  padding-left: 1rem
+  position: fixed
+
+.branding 
+  transform: rotate(90deg)
+  transform-origin: bottom left
+  font-size: 1rem
+
+
+.menu-button 
+  border: none
+  background: none
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 1rem
+  position: absolute
+  top: 0
+  left: 0
+
+.menu-button:hover
+  background-color: transparent
+
+.menu-button-img 
+  width: 100% 
+  height: auto 
+  max-width: 100% 
+  max-height: 100% 
+
+.nav 
+  position: absolute
+  font-family: 'druk'
+  left: 0
+  top: 0
+  bottom: 0
+  width: 10rem
+  background-color: #ccc
+  transform: translateX(-100%)
+  transition: transform 0.5s ease
+  display: flex
+  flex-direction: column
+  padding: 1rem
+
+
+.nav.open 
+  transform: translateX(0)
+
+
+.menu 
+  list-style: none
+  padding: 0
+  margin: 0
+
+
+.menu li 
+  margin-bottom: 1rem
+
+
+.menu li a 
+  text-decoration: none
+  color: #333
+  font-size: 2rem
+
+
+.menu li a:hover,
+.menu li a.active 
+  color: $accentcolor_green
+
+
+.connected 
+  margin-top: auto
+
+
+.nft 
+  margin-top: 1rem
+
