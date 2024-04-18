@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSmartContract } from '../context/SmartContractContext';
+import Footer from '../components/Footer';
 import '../styles/_ai.sass';
 
 function AI() {
@@ -112,6 +113,7 @@ function AI() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { usePoints } from '../context/PointsContext';
 import { usePrivy } from '@privy-io/react-auth'; 
 import { useSmartContract } from '../context/SmartContractContext';
+import Footer from '../components/Footer';
 import '../styles/_nfts.sass';
 
 const Rewards = () => {
@@ -76,7 +77,8 @@ const Rewards = () => {
 
   return (
     <div className="wrapper">
-      <div>
+      <div className="big-header">
+        PERKS AND REWARDS
         <div className="purchase-nfts">
           {nfts.map((nft) => (
             <div key={nft.id} className="nft-card">
@@ -89,6 +91,7 @@ const Rewards = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

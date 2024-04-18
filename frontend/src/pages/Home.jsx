@@ -1,5 +1,4 @@
 import React from 'react';
-import LoggedInScreen from '../pages/LoggedInScreen';
 import LoginLogoutButton from '../components/LoginLogoutButton';
 import { usePrivy } from '@privy-io/react-auth';
 import '../styles/_home.sass';
@@ -22,13 +21,6 @@ const Homepage = () => {
          <img src={sdv} alt="Saloranta de Vylder portrait" width="500" className="image-home" /> 
          <img src={lottery} alt="Lottery" className="image-lottery" />
          </div>
-      <div className="home-wrapper">
-        {user && authenticated ? ( 
-          <LoggedInScreen user={user} />
-        ) : (
-          <LoginLogoutButton /> 
-        )}
-      </div>
     </div>
     <Footer /> 
     </>

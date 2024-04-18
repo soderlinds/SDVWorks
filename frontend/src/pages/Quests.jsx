@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import usePointsBalance from '../hooks/PointsBalance';
 import { usePrivy } from '@privy-io/react-auth'; 
 import Modal from '../components/Modal';
+import Footer from '../components/Footer';
 import '../styles/_quests.sass';
 
 function EarnPoints() {
@@ -25,8 +26,9 @@ function EarnPoints() {
 
   return (
     <div className="wrapper">
+      <div className="big-header">QUESTS</div>
       <div>
-        <p className="earntokens-header">Receive SDV's by doing any of the following ↓</p>
+        <p className="earntokens-header">Receive Purpo$e by doing any of the following ↓</p>
         <div className="earn-item" onClick={() => handleEarnPoints(100)}>
           <span>Online review of a Saloranta & de Vylder production</span>
           <span>100</span>
@@ -41,6 +43,7 @@ function EarnPoints() {
         </div>
       </div>
       {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
+      <Footer />
     </div>
   );
 }

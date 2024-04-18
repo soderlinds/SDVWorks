@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { usePoints } from '../context/PointsContext'; 
 import { useSmartContract } from '../context/SmartContractContext';
 import { useNFTContext } from '../context/NFTContext'; 
+import Footer from '../components/Footer';
 import { usePrivy } from '@privy-io/react-auth'; 
 import '../styles/_nfts.sass';
 
@@ -95,6 +96,8 @@ function MyWallet() {
 
     return (
       <div className="wrapper">
+        <div className="big-header">
+        MY COLLECTION</div>
         {identifier && (
           <>
             {user && <p>User ID: {identifier}</p>}
@@ -127,6 +130,7 @@ function MyWallet() {
             </div>
           </>
         )}
+        <Footer />
       </div>
     );
   }

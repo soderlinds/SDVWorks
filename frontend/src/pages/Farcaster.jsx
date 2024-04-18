@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useExperimentalFarcasterSigner, usePrivy } from '@privy-io/react-auth';
+import Footer from '../components/Footer';
 
 function Farcaster() {
   const { user } = usePrivy();
@@ -76,6 +77,7 @@ function Farcaster() {
       <button onClick={() => handleLikeCast('0x3e9b3734a29ad341f1c73912c42343a21d5df75a', 403016)}>Like Sara's Cast</button>
       <button onClick={() => handleRecastCast('0x6be44f32011a59e239d5a00bb6302c3105ad3214', 403016)}>Recast Sara's Cast</button>
       <button onClick={() => handleUnfollowUser(403016)}>Unfollow Sara</button>
+      <Footer/>
     </div>
   );
 }

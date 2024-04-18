@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Market from './pages/Market';
+import Welcome from './pages/Welcome';
 import Quests from './pages/Quests';
 import AI from './pages/AI';
 import Rewards from './pages/Rewards';
@@ -32,6 +33,7 @@ function App() {
             
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/welcome" element={<Welcome />} />
               <Route path="/market" element={<Market />} />
               <Route path="/quests" element={<Quests />} />
               <Route path="/ai" element={<AI />} />

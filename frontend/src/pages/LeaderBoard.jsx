@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePoints } from '../context/PointsContext';
 import usePointsBalance from '../hooks/PointsBalance';
+import Footer from '../components/Footer';
 import { usePrivy } from '@privy-io/react-auth';
 import '../styles/_leaderboard.sass';
 
@@ -61,6 +62,7 @@ function LeaderBoard() {
 
   return (
     <div className="scoreboard">
+      <div className="big-header">LEADERBOARD</div>
       <div className="currentuser-info">
         {identifier && (
           <div className="currentuser-points">Your points:<span className="currentuser"> {pointsBalance}</span>
@@ -82,6 +84,7 @@ function LeaderBoard() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
