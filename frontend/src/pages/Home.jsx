@@ -15,7 +15,7 @@ const Homepage = () => {
       <div className="intro">
       <p className="intro-text">SDV Loyalty Group is a new way
          of enjoying performances, fantastic merch, 
-         and get a higher $Purpose by being together</p>
+         and get a higher Purpo$e by being together.</p>
          </div>
          <div className="images">
          <img src={sdv} alt="Saloranta de Vylder portrait" width="500" className="image-home" /> 
